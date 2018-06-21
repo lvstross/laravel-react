@@ -22,7 +22,7 @@ Rename the .env.example file to .env and generate the application key
 ~ php artisan key:generate
 ```
 
-Server up the application using artisan
+Serve up the application using artisan
 ```bash
 ~ php artisan serve
 ```
