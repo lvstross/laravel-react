@@ -7,23 +7,21 @@ The application features one controller responsible for handleing the request an
 ## Set Up Instructions
 
 Run composer and npm and compile the assets.
-
 ```bash
 ~ composer install
 ~ npm install
 ~ npm run dev
 ```
 
-Change the .env.example file to a .env files. The only configuration needed is the application key. Generate this key with
-
+Rename the .env.example file to .env and generate the application key
 ```bash
+~ mv .env.example .env
 ~ php artisan key:generate
 ```
 
-Server up the application
-
+Server up the application using artisan
 ```bash
-~ php artisan server
+~ php artisan serve
 ```
 
 
