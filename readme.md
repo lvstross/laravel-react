@@ -1,11 +1,4 @@
-# Friendemic Project
-
-<img src="https://github.com/lvstross/friendemic-project/blob/master/public/img/text-image.png">
-
-The project is a 5.6 Laravel install using React with Laravel Mix. The application is a text transformer where you can input one character
- in a string to be transformed into whatever you want it to be. Every occurrence of that character in the provided text will be transformed 
- and output on the screen. The application features one controller responsible for handling the request and a couple React components that make 
- up the form and output HTML.
+<h1 align="center">Laravel / React</h1>
 
 ## Set Up Instructions
 
