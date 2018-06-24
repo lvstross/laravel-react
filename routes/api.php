@@ -17,5 +17,3 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// API route endpoint for the transform method on TransformController
-Route::post('/transform', 'TransformController@transform');

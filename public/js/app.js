@@ -70,7 +70,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(6);
+var bind = __webpack_require__(7);
 var isBuffer = __webpack_require__(25);
 
 /*global toString:true*/
@@ -397,10 +397,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(7);
+    adapter = __webpack_require__(8);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(7);
+    adapter = __webpack_require__(8);
   }
   return adapter;
 }
@@ -484,6 +484,20 @@ module.exports = defaults;
 "use strict";
 
 
+if (false) {
+  module.exports = require('./cjs/react.production.min.js');
+} else {
+  module.exports = __webpack_require__(43);
+}
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -520,7 +534,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 var g;
@@ -547,7 +561,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3073,10 +3087,10 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(4)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -13447,7 +13461,7 @@ return jQuery;
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13465,7 +13479,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13476,7 +13490,7 @@ var settle = __webpack_require__(29);
 var buildURL = __webpack_require__(31);
 var parseHeaders = __webpack_require__(32);
 var isURLSameOrigin = __webpack_require__(33);
-var createError = __webpack_require__(8);
+var createError = __webpack_require__(9);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(34);
 
 module.exports = function xhrAdapter(config) {
@@ -13652,7 +13666,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13677,7 +13691,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13689,7 +13703,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13712,20 +13726,6 @@ Cancel.prototype.toString = function toString() {
 Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (false) {
-  module.exports = require('./cjs/react.production.min.js');
-} else {
-  module.exports = __webpack_require__(43);
-}
 
 
 /***/ }),
@@ -13922,7 +13922,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(3);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -14087,17 +14087,17 @@ module.exports = __webpack_require__(58);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Transformer__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_App__ = __webpack_require__(57);
 __webpack_require__(19);
 
 
 
 
-var app = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Transformer__["a" /* default */], null);
+var app = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_App__["a" /* default */], null);
 var el = document.getElementById('root');
 
 if (el) {
@@ -14110,7 +14110,7 @@ if (el) {
 
 
 window._ = __webpack_require__(20);
-window.Popper = __webpack_require__(4).default;
+window.Popper = __webpack_require__(5).default;
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -14119,7 +14119,7 @@ window.Popper = __webpack_require__(4).default;
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(5);
+  window.$ = window.jQuery = __webpack_require__(6);
 
   __webpack_require__(22);
 } catch (e) {}
@@ -31276,7 +31276,7 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(21)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(21)(module)))
 
 /***/ }),
 /* 21 */
@@ -31316,7 +31316,7 @@ module.exports = function(module) {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(5), __webpack_require__(4)) :
+   true ? factory(exports, __webpack_require__(6), __webpack_require__(5)) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
   (factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
@@ -35253,7 +35253,7 @@ module.exports = __webpack_require__(24);
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(6);
+var bind = __webpack_require__(7);
 var Axios = __webpack_require__(26);
 var defaults = __webpack_require__(1);
 
@@ -35288,9 +35288,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(10);
+axios.Cancel = __webpack_require__(11);
 axios.CancelToken = __webpack_require__(41);
-axios.isCancel = __webpack_require__(9);
+axios.isCancel = __webpack_require__(10);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -35633,7 +35633,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(8);
+var createError = __webpack_require__(9);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -36066,7 +36066,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(38);
-var isCancel = __webpack_require__(9);
+var isCancel = __webpack_require__(10);
 var defaults = __webpack_require__(1);
 var isAbsoluteURL = __webpack_require__(39);
 var combineURLs = __webpack_require__(40);
@@ -36226,7 +36226,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(10);
+var Cancel = __webpack_require__(11);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -36343,7 +36343,7 @@ var _assign = __webpack_require__(12);
 var invariant = __webpack_require__(13);
 var emptyObject = __webpack_require__(14);
 var warning = __webpack_require__(15);
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(3);
 var checkPropTypes = __webpack_require__(16);
 
 // TODO: this is special because it gets imported during build.
@@ -37897,11 +37897,11 @@ if (true) {
 'use strict';
 
 var invariant = __webpack_require__(13);
-var React = __webpack_require__(11);
+var React = __webpack_require__(2);
 var warning = __webpack_require__(15);
 var ExecutionEnvironment = __webpack_require__(47);
 var _assign = __webpack_require__(12);
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(3);
 var checkPropTypes = __webpack_require__(16);
 var getActiveElement = __webpack_require__(48);
 var shallowEqual = __webpack_require__(49);
@@ -55719,108 +55719,12 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 57 */,
-/* 58 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-
-
-var input = function input(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "div",
-    { className: "form-group" },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "label",
-      { htmlFor: props.forText },
-      props.labelText
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-      className: "form-control full-width",
-      type: "text",
-      maxLength: props.length,
-      value: props.value,
-      onChange: props.change,
-      required: true
-    })
-  );
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (input);
-
-/***/ }),
-/* 65 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-
-
-var FormTextArea = function FormTextArea(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "div",
-    { className: "form-group" },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "label",
-      { htmlFor: props.forText },
-      props.labelText
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
-      className: "form-control",
-      rows: props.numRows,
-      maxLength: props.length,
-      value: props.value,
-      onChange: props.change,
-      required: true
-    })
-  );
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (FormTextArea);
-
-/***/ }),
-/* 66 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-
-
-var StatusMessage = function StatusMessage(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'p',
-    { className: 'alert alert-' + props.type },
-    props.status == false ? '' : props.text
-  );
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (StatusMessage);
-
-/***/ }),
-/* 67 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_FormInput__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_FormTextArea__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__partials_StatusMessage__ = __webpack_require__(66);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55831,204 +55735,56 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-
-
-
 /**
  * Transformer Class
  * Extends: Component
  * Renders: Html form and processes it's request
  */
 
-var Transformer = function (_Component) {
-    _inherits(Transformer, _Component);
+var App = function (_Component) {
+    _inherits(App, _Component);
 
     /**
      * Constructor which sets super props, state and binds methods
      *
      * @param props object
      */
-    function Transformer(props) {
-        _classCallCheck(this, Transformer);
+    function App(props) {
+        _classCallCheck(this, App);
 
-        var _this = _possibleConstructorReturn(this, (Transformer.__proto__ || Object.getPrototypeOf(Transformer)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
         _this.state = {
-            modified: "e",
-            modifier: "Hoopla!",
-            text: 'The text in this box is the text to be transformed. Every instance of the "Letter To Be Transformed" is going to be transformed to the modifier next to it. Go ahead and play around with it. Only one character is allowed to be transformed at a time. Make something wacky out of it.',
-            status: false,
-            type: '',
-            responseText: ''
+            message: "Hello! I'm a React app set up for laravel!"
         };
-        // Bindings
-        _this.handleModified = _this.handleModified.bind(_this);
-        _this.handleModifier = _this.handleModifier.bind(_this);
-        _this.handleText = _this.handleText.bind(_this);
-        _this.handleTransform = _this.handleTransform.bind(_this);
-        _this.handleSubmit = _this.handleSubmit.bind(_this);
         return _this;
     }
 
-    /**
-     * Sets the state of the modified state property
-     *
-     * @param event object
-     */
-
-
-    _createClass(Transformer, [{
-        key: 'handleModified',
-        value: function handleModified(event) {
-            this.setState({ modified: event.target.value });
-        }
-
-        /**
-         * Sets the state of the modifier state property
-         *
-         * @param event object
-         */
-
-    }, {
-        key: 'handleModifier',
-        value: function handleModifier(event) {
-            this.setState({ modifier: event.target.value });
-        }
-
-        /**
-         * Sets the state of the text state property
-         *
-         * @param event object
-         */
-
-    }, {
-        key: 'handleText',
-        value: function handleText(event) {
-            this.setState({ text: event.target.value });
-        }
-
-        /**
-         * Makes a post request to '/transform'.
-         */
-
-    }, {
-        key: 'handleTransform',
-        value: function handleTransform() {
-            var _this2 = this;
-
-            axios({
-                method: 'post',
-                url: 'api/transform',
-                data: this.state,
-                validateStatus: function validateStatus(status) {
-                    if (status >= 200 && status < 300) {
-                        return status;
-                    } else {
-                        alert('Sorry something went wrong :(');
-                        throw new Error('Ajax request faild with a status code of: ' + status);
-                    }
-                }
-            }).then(function (response) {
-                _this2.setState({
-                    status: true,
-                    type: response.data.type,
-                    responseText: response.data.responseText
-                });
-            }).catch(function (error) {
-                throw new Error('Ajax request failed! Message: ' + error);
-            });
-        }
-
-        /**
-         * Handles the submition of the form. Prevents the default
-         * behavior, logs the results in the console and calls the
-         * handleTransform method.
-         */
-
-    }, {
-        key: 'handleSubmit',
-        value: function handleSubmit(event) {
-            console.log("Modified: ", this.state.modified);
-            console.log("Modifier: ", this.state.modifier);
-            console.log("Text: ", this.state.text);
-            this.handleTransform();
-            event.preventDefault();
-        }
-    }, {
-        key: 'render',
+    _createClass(App, [{
+        key: "render",
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'container' },
+                "div",
+                { className: "container" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-box' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'form',
-                        { onSubmit: this.handleSubmit },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'row' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'col-sm-12 col-md-4' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__partials_FormInput__["a" /* default */], {
-                                    forText: 'modified',
-                                    labelText: 'Change:',
-                                    length: '1',
-                                    value: this.state.modified,
-                                    change: this.handleModified
-                                })
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'col-sm-12 col-md-8' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__partials_FormInput__["a" /* default */], {
-                                    forText: 'modifier',
-                                    labelText: 'Into:',
-                                    length: '20',
-                                    value: this.state.modifier,
-                                    change: this.handleModifier
-                                })
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'row' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'col-sm-12' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__partials_FormTextArea__["a" /* default */], {
-                                    forText: 'text',
-                                    labelText: 'Text To Be Transformed:',
-                                    numRows: '5',
-                                    length: '500',
-                                    value: this.state.text,
-                                    change: this.handleText
-                                })
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'col-sm-12' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'btn btn-primary full-width', type: 'submit', value: 'Transform!' })
-                            )
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__partials_StatusMessage__["a" /* default */], {
-                        type: this.state.type,
-                        status: this.state.status,
-                        text: this.state.responseText
-                    })
+                    "p",
+                    { className: "text-center" },
+                    this.state.message
                 )
             );
         }
     }]);
 
-    return Transformer;
+    return App;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["a"] = (Transformer);
+/* harmony default export */ __webpack_exports__["a"] = (App);
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

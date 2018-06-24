@@ -1,6 +1,12 @@
 .jumbotron {
-    background: #007bff;
+    background: #25282e;
     color: #fff;
+    & .laravel {
+        color: #fa5e60;
+    }
+    & .react {
+        color: #50dafb;
+    }
 }
 .form-box {
     width: 60%;

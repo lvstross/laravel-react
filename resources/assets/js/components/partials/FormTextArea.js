@@ -10,7 +10,7 @@ const FormTextArea = (props) => {
           maxLength={props.length}
           value={props.value}
           onChange={props.change}
-          required
+          required={props.required}
         />
       </div>
   )

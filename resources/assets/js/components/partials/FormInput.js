@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 
-const input = (props) => {
+const Input = (props) => {
   return (
       <div className="form-group">
         <label htmlFor={props.forText}>{props.labelText}</label>
         <input
-          className="form-control full-width"
-          type="text"
-          maxLength={props.length}
+          className={props.classes}
+          type={props.type}
           value={props.value}
           onChange={props.change}
-          required
+          required={props.required}
         />
       </div>
   )
 };
 
-export default input;
+export default Input;

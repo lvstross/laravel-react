@@ -10412,8 +10412,16 @@ a.text-dark:focus {
 }
 
 .jumbotron {
-  background: #007bff;
+  background: #25282e;
   color: #fff;
+}
+
+.jumbotron .laravel {
+  color: #fa5e60;
+}
+
+.jumbotron .react {
+  color: #50dafb;
 }
 
 .form-box {

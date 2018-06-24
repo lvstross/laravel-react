@@ -1,9 +1,9 @@
 require('./bootstrap');
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Transformer from './components/Transformer';
+import App from './components/App';
 
-const app = ( <Transformer />);
+const app = ( <App />);
 let el = document.getElementById('root');
 
 if(el){
