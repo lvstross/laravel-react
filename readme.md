@@ -28,6 +28,6 @@ When editing the react files
 
 When pushing to production
 ```bash
-~ npm run dev
+~ npm run prod
 ```
 
