@@ -20,4 +20,14 @@ Serve up the application using artisan
 ~ php artisan serve
 ```
 
+When editing the react files
+```bash
+~ npm run dev // single compile
+~ npm run watch // watches files
+```
+
+When pushing to production
+```bash
+~ npm run dev
+```
 
